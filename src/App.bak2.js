@@ -242,18 +242,3 @@ export default class App extends Component {
 	hideFixedMenu = () => this.setState({ visible: false })
 	showFixedMenu = () => this.setState({ visible: true })
 }
-
-// import React from 'react'
-// import { HashRouter, Route } from 'react-router-dom'
-// import L from './L'
-// import M from './M'
-// const App = () => (
-// 	<HashRouter>
-// 		<div className="app">
-// 			<Route exact path="/" component={L} />
-// 			<Route path="/search" component={M} />
-// 		</div>
-// 	</HashRouter>
-// )
-//
-// export default App
