@@ -71,18 +71,3 @@ const SubPageLayout = () => (
   </div>)
 
 export default SubPageLayout
-
-
-// const SubPageLayout = () => (
-//   <div className="user-sub-layout">
-//     <aside>
-//       <SubPageNavigation />
-//     </aside>
-//     <div className="primary-content">
-//       <Switch>
-//         <Route path="/subpage-a" exact component={SubPageA} />
-//         <Route path="/subpage-b" component={SubPageB} />
-//       </Switch>
-//     </div>
-//   </div>
-// )

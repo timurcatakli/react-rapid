@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Button,
+  Dropdown,
   Container,
   Divider,
   Grid,
@@ -39,7 +40,8 @@ const FixedMenu = () => (
 
 export default class Home extends Component {
   render() {
-    const { visible } = this.state
+    const { activeItem, visible } = this.state
+
     return (
       <div>
         {visible ? <FixedMenu /> : null}
@@ -56,22 +58,53 @@ export default class Home extends Component {
             vertical
           >
             <Container>
-              <Menu inverted pointing secondary size="large">
-                <Menu.Item as="a" active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as="a"><Link to="/subpage-a">SubPageA</Link></Menu.Item>
-                <Menu.Item as="a"><Link to="/subpage-b">SubPageB</Link></Menu.Item>
-                <Menu.Item as="a">Company</Menu.Item>
-                <Menu.Item as="a">Careers</Menu.Item>
-                <Menu.Item position="right">
-                  <Button as="a" inverted>
-                    Log in
-                  </Button>
-                  <Button as="a" inverted style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
-                </Menu.Item>
+              <Menu
+                size="huge"
+                stackable
+                inverted
+                pointing
+                secondary
+              >
+                <Menu.Item header>Our Company</Menu.Item>
+                <Menu.Item
+                  link
+                  name='home'
+                  as={Link}
+                  to='/'
+                  active={activeItem === 'home'}
+                  onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                  link
+                  name='subpage-a'
+                  as={Link}
+                  to='/subpage-a'
+                  active={activeItem === 'subpage-a'}
+                  onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                  link
+                  name='subpage-b'
+                  as={Link}
+                  to='/subpage-b'
+                  active={activeItem === 'subpage-b'}
+                  onClick={this.handleItemClick}
+                />
+                <Menu.Menu position='right'>
+                  <Dropdown item text='Language'>
+                    <Dropdown.Menu>
+                      <Dropdown.Item>English</Dropdown.Item>
+                      <Dropdown.Item>Russian</Dropdown.Item>
+                      <Dropdown.Item>Spanish</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                  <Menu.Item>
+                    <Button primary>Sign Up</Button>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Button>Log-in</Button>
+                  </Menu.Item>
+                </Menu.Menu>
               </Menu>
             </Container>
 
@@ -242,7 +275,8 @@ export default class Home extends Component {
       </div>
     )
   }
-  state = {}
+  state = { activeItem: 'home' }
   hideFixedMenu = () => this.setState({ visible: false })
   showFixedMenu = () => this.setState({ visible: true })
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 }
