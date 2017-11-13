@@ -1,23 +1,19 @@
 import React from 'react'
-import { Container, Header, Image } from 'semantic-ui-react'
+import { Container, Divider, Header } from 'semantic-ui-react'
+
 const SubPageB = () => (
-  <Container text style={{ marginTop: '7em' }}>
-    <Header as='h1'>SubPageB React Fixed Template</Header>
-    <p>This is a basic fixed menu template using fixed size containers.</p>
-    <p>A text container is used for the main container, which is useful for single column layouts.</p>
-    <p>This is a basic fixed menu template using fixed size containers.</p>
-    <p>A text container is used for the main container, which is useful for single column layouts.</p>
-    <p>This is a basic fixed menu template using fixed size containers.</p>
-    <p>A text container is used for the main container, which is useful for single column layouts.</p>
+  <div>
+    <Container>
+      <Header as='h1' dividing>Using Grids</Header>
+      <Header as='h3'>Container</Header>
+      <p>
+        A container is a fixed width element that wraps your site's content. It remains a constant size and
+        uses <b>margin</b> to center. Containers are the simplest way to center page content inside a grid.
+      </p>
+    </Container>
 
-    <Image src='/assets/images/wireframe/media-paragraph.png' style={{ marginTop: '2em' }} />
-    <Image src='/assets/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-    <Image src='/assets/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-    <Image src='/assets/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-    <Image src='/assets/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-    <Image src='/assets/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-    <Image src='/assets/images/wireframe/paragraph.png' style={{ marginTop: '2em' }} />
-  </Container>
-
+    <Divider hidden />
+  </div>
 )
+
 export default SubPageB

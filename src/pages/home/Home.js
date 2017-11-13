@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import {
   Button,
-  Dropdown,
   Container,
   Divider,
   Grid,
@@ -14,6 +12,7 @@ import {
   Segment,
   Visibility
 } from 'semantic-ui-react'
+import MainNavigation from '../MainNavigation'
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
@@ -40,7 +39,7 @@ const FixedMenu = () => (
 
 export default class Home extends Component {
   render() {
-    const { activeItem, visible } = this.state
+    const { visible } = this.state
 
     return (
       <div>
@@ -51,63 +50,13 @@ export default class Home extends Component {
           onBottomVisible={this.hideFixedMenu}
           once={false}
         >
+          <MainNavigation />
           <Segment
             inverted
             textAlign="center"
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
           >
-            <Container>
-              <Menu
-                size="huge"
-                stackable
-                inverted
-                pointing
-                secondary
-              >
-                <Menu.Item header>Our Company</Menu.Item>
-                <Menu.Item
-                  link
-                  name='home'
-                  as={Link}
-                  to='/'
-                  active={activeItem === 'home'}
-                  onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                  link
-                  name='subpage-a'
-                  as={Link}
-                  to='/subpage-a'
-                  active={activeItem === 'subpage-a'}
-                  onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                  link
-                  name='subpage-b'
-                  as={Link}
-                  to='/subpage-b'
-                  active={activeItem === 'subpage-b'}
-                  onClick={this.handleItemClick}
-                />
-                <Menu.Menu position='right'>
-                  <Dropdown item text='Language'>
-                    <Dropdown.Menu>
-                      <Dropdown.Item>English</Dropdown.Item>
-                      <Dropdown.Item>Russian</Dropdown.Item>
-                      <Dropdown.Item>Spanish</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                  <Menu.Item>
-                    <Button primary>Sign Up</Button>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <Button>Log-in</Button>
-                  </Menu.Item>
-                </Menu.Menu>
-              </Menu>
-            </Container>
-
             <Container text>
               <Header
                 as="h1"
