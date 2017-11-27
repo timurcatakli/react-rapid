@@ -21,6 +21,8 @@ const SubPageLayout = () => {
   // const matchedPath = props.match.path
   // const matchedPathId = matchedPath.substr(1)
   // const pageTitle = config.pages2[matchedPathId].label
+
+  // find the current page and pass it to SubPageHeader
   return (
     <div style={{ backgroundColor: '#f9f9f9' }}>
       <SubPageNavigation subpages={config.pages2} siteLabel={config.siteLabel} />

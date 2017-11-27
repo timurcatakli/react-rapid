@@ -7,14 +7,20 @@ import config from './config'
 import './app.css'
 
 const App = () => {
-  const xxx = Object.keys(config.pages2).map((obj) => {
-    return <Route key={config.pages2[obj].label} path={config.pages2[obj].path} component={SubPageLayout} />
+  const renderRoutes = Object.keys(config.pages2).map(page => {
+    return (
+      <Route
+        key={config.pages2[page].label}
+        path={config.pages2[page].path}
+        component={SubPageLayout}
+      />
+    )
   })
   return (
     <div className="app">
       <Switch>
         <Route path="/" exact component={Home} />
-        {xxx}
+        {renderRoutes}
         <Route component={FourOhFour} />
       </Switch>
     </div>
