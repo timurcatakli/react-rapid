@@ -1,27 +1,25 @@
 import React from 'react'
 import { Header, Grid, Container, Segment } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
-import SubPageBreadcrumb from './SubPageBreadcrumb'
 
 const propTypes = {
-  label: PropTypes.string.isRequired
+  activePage: PropTypes.object.isRequired
 }
 
-const SubPageHeader = ({ label }) => (
-  <Segment basic style={{ backgroundColor: '#F5F5F5', padding: 40 }}>
-    <Container>
-      <Grid stretched>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as={'h2'}>{label.toUpperCase()}</Header>
-          </Grid.Column>
-          <Grid.Column width={8} textAlign={'right'}>
-            <SubPageBreadcrumb label="About Us" />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Container>
-  </Segment>
+const SubPageHeader = ({ activePage }) => (
+  <div className="subpage-header-container">
+    <Segment basic>
+      <Container>
+        <Grid verticalAlign='middle'>
+          <Grid.Row>
+            <Grid.Column width={16} textAlign="center">
+              <Header as={'h2'}>{activePage.label.toUpperCase()}</Header>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
+    </Segment>
+  </div>
 )
 
 SubPageHeader.defaultProps = {

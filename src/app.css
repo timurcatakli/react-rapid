@@ -1,25 +1,50 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Helvetica,Arial,sans-serif;
   line-height: 1.8em;
   color: #3a3a3a;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
   margin-bottom: 2em;
   margin-top: 2em;
-  font-family: Helvetica,Arial,sans-serif; 
   line-height: 1.8em;
   font-size: 18px;
   color: #000000b3;
 }
 
+@media screen and (min-width: 768px) {
+  .subpage-header-container {
+    margin-top: 4em;
+  }
+}
+
+.subpage-header-container {
+  background-color: #f5f5f5;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url('http://t.commonsupport.com/calena/images/background/2.jpg');
+}
+
+.subpage-footer {
+  background-color: #f5f5f5;
+}
+
+.ui.large.menu {
+  background-color: white;
+  height: 100px;
+}
+
 .ui.header {
-  font-family: Helvetica,Arial,sans-serif;
-  color: #3a3a3a;
+  position: relative;
+  line-height: 1em;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #000000;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 
 .ui.section.divider {

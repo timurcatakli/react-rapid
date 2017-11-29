@@ -15,23 +15,25 @@ const propTypes = {
   })
 }
 
-
-const SubPageLayout = () => {
+const SubPageLayout = props => {
   const aboutUs = config.pages[0]
-  // const matchedPath = props.match.path
-  // const matchedPathId = matchedPath.substr(1)
-  // const pageTitle = config.pages2[matchedPathId].label
+  const { pages, siteLabel } = config
+  const activePageMatch = Object.keys(pages).filter(page => {
+    return pages[page].path === props.match.path
+  })
+  const activePage = pages[activePageMatch[0]]
 
-  // find the current page and pass it to SubPageHeader
   return (
     <div style={{ backgroundColor: '#f9f9f9' }}>
-      <SubPageNavigation subpages={config.pages2} siteLabel={config.siteLabel} />
-      <SubPageHeader label={'pageTitle'} />
+      <SubPageNavigation subpages={pages} siteLabel={siteLabel} />
+      {/* <SubPageHeader activePage={activePage} /> */}
       <Switch>
         <Route path="/subpage-a" exact>
           <SubPageA />
         </Route>
-        <Route path="/subpage-b" component={SubPageB} />
+        <Route path="/subpage-b" exact>
+          <SubPageB />
+        </Route>
         <Route path="/aboutus">
           <AboutUs pageData={aboutUs} />
         </Route>
