@@ -1,3 +1,5 @@
+// http://t.commonsupport.com/calena/about.html
+// http://abcgomel.ru/haswell/about-us-2.html
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Home from './pages/home/Home'
@@ -7,14 +9,20 @@ import config from './config'
 import './app.css'
 
 const App = () => {
-  const xxx = Object.keys(config.pages2).map((obj) => {
-    return <Route key={config.pages2[obj].label} path={config.pages2[obj].path} component={SubPageLayout} />
+  const renderRoutes = Object.keys(config.pages).map(page => {
+    return (
+      <Route
+        key={config.pages[page].label}
+        path={config.pages[page].path}
+        component={SubPageLayout}
+      />
+    )
   })
   return (
     <div className="app">
       <Switch>
         <Route path="/" exact component={Home} />
-        {xxx}
+        {renderRoutes}
         <Route component={FourOhFour} />
       </Switch>
     </div>

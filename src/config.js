@@ -1,26 +1,25 @@
 const config = {
 
-  homepage: 'htts://www.siteurl.com',
-  siteLabel: 'Site Label Goes Here',
-  pages: [
-    {label: 'About Us'},
-    {label: 'Subpage A'},
-    {label: 'Subpage B'},
-    {label: 'Site Map'},
-    {label: 'Contact Us'},
-    {label: 'Terms and Conditions'},
-    {label: 'Privacy Policy'}
-  ],
-  pages2: {
+  homepage: 'http://www.siteurl.com',
+  siteLabel: 'ACME Corp',
+  copyrightYear: 2017,
+  menuCallToAction: {
+    active: true,
+    message: 'CALL US 1.369.741.2580'
+  },
+  pages: {
     aboutus: {
+      component: 'AboutUs',
       label: 'About Us',
       path: '/aboutus'
     },
     aboutus1: {
+      component: 'AboutUs',
       label: 'About Us1',
       path: '/subpage-a'
     },
     aboutus2: {
+      component: 'AboutUs',
       label: 'About Us2',
       path: '/subpage-b'
     }
