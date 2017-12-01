@@ -47,8 +47,6 @@ class SubPageNavigation extends Component {
     const { menuCallToAction } = config
     const menuItems = this.renderMenuItems(subpages)
     const callToAction = this.renderCallToAction(menuCallToAction)
-<<<<<<< HEAD
-=======
     const languageOptions = [
       { key: 'Arabic', text: 'Arabic', value: 'Arabic' },
       { key: 'Arabic1', text: 'Arabic1', value: 'Arabic1' },
@@ -56,7 +54,6 @@ class SubPageNavigation extends Component {
       { key: 'Arabic3', text: 'Arabic3', value: 'Arabic3' }
     ]
 
->>>>>>> 05-refactor-page-layout
     return (
       <div>
         <Grid>
@@ -81,7 +78,6 @@ class SubPageNavigation extends Component {
           </Grid.Row>
 
           <Grid.Row only="computer">
-            <<<<<<< HEAD
             <Grid.Column>
               <Menu
                 size="large"
@@ -101,54 +97,6 @@ class SubPageNavigation extends Component {
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row only="mobile">
-            <Grid.Column>
-              <Menu
-                size="small"
-                secondary
-                =======
-                <Grid.Column>
-                  <Menu
-                    size="large"
-                    secondary
-                    fixed="top"
-                    color="orange"
-                    className="top-menu"
-                  >>>>>>> 05-refactor-page-layout
-                    >
-                    <Menu.Item header color="orange">
-                      <img src="https://react.semantic-ui.com/logo.png" /> &nbsp;{' '}
-                      {siteLabel}
-                    </Menu.Item>
-                    <Menu.Item link name="home" as={NavLink} exact to="/" />
-                    <Menu.Item link name="home1" as={NavLink} exact to="/" />
-                    <Menu.Item link name="home2" as={NavLink} exact to="/" />
-                    <Menu.Item link name="home3" as={NavLink} exact to="/" />
-                    <Menu.Item link name="home4" as={NavLink} exact to="/" />
-                    <Menu.Item link name="home5" as={NavLink} exact to="/" />
-                    {menuItems}
-                    {callToAction}
-                  </Menu>
-                </Grid.Column>
-          </Grid.Row>
-
-<<<<<<< HEAD
-          {/* <Grid.Row only="mobile">
-            <Grid.Column>
-              <Menu secondary fixed="top" style={{ backgroundColor: 'gold' }}>
-                <Menu.Item header color="orange">
-                  {siteLabel}
-                </Menu.Item>
-                <Menu.Item>
-                  <Dropdown item text="Categories">
-                    <Dropdown.Menu>
-                      <Dropdown.Item>Electronics</Dropdown.Item>
-                      <Dropdown.Item>Automotive</Dropdown.Item>
-                      <Dropdown.Item>Home</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Menu.Item>
-=======
           <Grid.Row only="mobile">
             <Grid.Column>
               <Dropdown
@@ -179,22 +127,12 @@ class SubPageNavigation extends Component {
             </Dropdown.Menu>
             </Dropdown>
             </Menu.Item>
->>>>>>> 05-refactor-page-layout
               </Menu>
             </Grid.Column>
           </Grid.Row> */}
 
           <Grid.Row>
             <Grid.Column>
-<<<<<<< HEAD
-              <div className="subpage-header-container" style={{backgroundColor: 'gold'}}>
-                <Segment basic>
-                  <Container>
-                    <Grid verticalAlign='middle'>
-                      <Grid.Row>
-                        <Grid.Column width={16} textAlign="center">
-                          <Header as={'h2'}>alskdjaslkdjasd</Header>
-=======
               <div
                 className="subpage-header-container"
                 style={{ backgroundColor: 'gold' }}
@@ -205,7 +143,6 @@ class SubPageNavigation extends Component {
                       <Grid.Row>
                         <Grid.Column width={16}>
                           <Header as={'h2'} style={{color: 'gold'}}>PAGE TITLE</Header>
->>>>>>> 05-refactor-page-layout
                         </Grid.Column>
                       </Grid.Row>
                     </Grid>
