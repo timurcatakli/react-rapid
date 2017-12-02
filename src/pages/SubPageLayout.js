@@ -26,7 +26,7 @@ const SubPageLayout = props => {
   return (
     <div style={{ backgroundColor: '#f9f9f9' }}>
       <SubPageNavigation subpages={pages} siteLabel={siteLabel} />
-      {/* <SubPageHeader activePage={activePage} /> */}
+      <SubPageHeader activePage={activePage} />
       <Switch>
         <Route path="/subpage-a" exact>
           <SubPageA />
