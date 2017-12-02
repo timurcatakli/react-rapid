@@ -1,70 +1,55 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { slide as Menu } from 'react-burger-menu'
+import React, { Component } from 'react'
 import {
-  Button
+  Sidebar,
+  Segment,
+  Button,
+  Menu,
+  Image,
+  Icon,
+  Header
 } from 'semantic-ui-react'
 
-const propTypes = {
-  subpages: PropTypes.object.isRequired
-}
-
-
-const styles = {
-  bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
-    left: '36px',
-    top: '36px'
-  },
-  bmBurgerBars: {
-    // background: '#EEEEEE'
-    background: 'red'
-  },
-  bmCrossButton: {
-    height: '24px',
-    width: '24px'
-  },
-  bmCross: {
-    background: '#bdc3c7'
-  },
-  bmMenu: {
-    background: '#373a47',
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.15em'
-  },
-  bmMorphShape: {
-    fill: '#373a47'
-  },
-  bmItemList: {
-    color: '#b8b7ad',
-    padding: '0.8em'
-  },
-  bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)'
-  }
-}
-
-class SubPageMobileNavigation extends React.Component {
-  renderMenuItems = subpages => {
-    const menuItems = Object.keys(subpages).map(page => {
-      return (
-        <Button inverted style={{marginBottom: '10px', width: '200px'}}>{subpages[page].label}</Button>
-      )
-    })
-    return menuItems
-  }
+class SubPageMobileNavigation extends Component {
   render() {
-    const { subpages } = this.props
-    const menuItems = this.renderMenuItems(subpages)
+    const { visible } = this.state
     return (
-      <Menu styles={styles}>
-        {menuItems}
-      </Menu>
+      <div>
+        <Button onClick={this.toggleVisibility}>Toggle Visibility</Button>
+        <Sidebar.Pushable as={Segment}>
+          <Sidebar
+            as={Menu}
+            animation="overlay"
+            width="thin"
+            visible={visible}
+            icon="labeled"
+            vertical
+            inverted
+          >
+            <Menu.Item name="home">
+              <Icon name="home" />
+              Home
+            </Menu.Item>
+            <Menu.Item name="gamepad">
+              <Icon name="gamepad" />
+              Games
+            </Menu.Item>
+            <Menu.Item name="camera">
+              <Icon name="camera" />
+              Channels
+            </Menu.Item>
+          </Sidebar>
+          <Sidebar.Pusher>
+            <Segment basic>
+              <Header as="h3">Application Content</Header>
+              <Image src="/assets/images/wireframe/paragraph.png" />
+            </Segment>
+          </Sidebar.Pusher>
+        </Sidebar.Pushable>
+      </div>
     )
   }
+  toggleVisibility = () => this.setState({ visible: !this.state.visible })
+  state = { visible: false }
 }
 
-SubPageMobileNavigation.propTypes = propTypes
 export default SubPageMobileNavigation
