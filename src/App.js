@@ -3,7 +3,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Home from './pages/home/Home'
-import SubPageLayout from './pages/SubPageLayout'
+import PageLayout from './components/PageLayout'
 import FourOhFour from './pages/FourOhFour'
 import config from './config'
 import './app.css'
@@ -14,7 +14,7 @@ const App = () => {
       <Route
         key={config.pages[page].label}
         path={config.pages[page].path}
-        component={SubPageLayout}
+        component={PageLayout}
       />
     )
   })

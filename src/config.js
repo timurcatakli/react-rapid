@@ -1,7 +1,7 @@
 const config = {
-
   homepage: 'http://www.siteurl.com',
   siteLabel: 'ACME Corp',
+  siteLogoUrl: 'https://react.semantic-ui.com/logo.png',
   copyrightYear: 2017,
   menuCallToAction: {
     active: true,

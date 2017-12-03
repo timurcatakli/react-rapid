@@ -12,7 +12,7 @@ import {
   Segment,
   Visibility
 } from 'semantic-ui-react'
-import SubPageNavigation from '../SubPageNavigation'
+
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
@@ -50,7 +50,6 @@ export default class Home extends Component {
           onBottomVisible={this.hideFixedMenu}
           once={false}
         >
-          <SubPageNavigation />
           <Segment
             inverted
             textAlign="center"

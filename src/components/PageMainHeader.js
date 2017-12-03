@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Container,
   Grid,
@@ -6,7 +7,13 @@ import {
   Header
 } from 'semantic-ui-react'
 
-const SubPageHeader = () => {
+const propTypes = {
+  activePage: PropTypes.object.isRequired
+}
+
+const PageMainHeader = (props) => {
+  const {activePage} = props
+  const {label, subTitle} = activePage
   return (
     <div className="subpage-header-container">
       <Segment basic>
@@ -15,10 +22,10 @@ const SubPageHeader = () => {
             <Grid.Row>
               <Grid.Column width={12}>
                 <Header as={'h2'} style={{ color: 'gold' }}>
-                  PAGE TITLE
+                  {label.toUpperCase()}
                 </Header>
                 <div className="page-sub-title">
-                  Lorem ipsum dolor sit amet consectetur
+                  {subTitle}
                 </div>
               </Grid.Column>
             </Grid.Row>
@@ -29,4 +36,5 @@ const SubPageHeader = () => {
   )
 }
 
-export default SubPageHeader
+PageMainHeader.propTypes = propTypes
+export default PageMainHeader
