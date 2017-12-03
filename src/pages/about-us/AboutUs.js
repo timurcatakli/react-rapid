@@ -1,13 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  Segment,
-  Container,
-  Statistic,
-  Image,
-  Icon
-} from 'semantic-ui-react'
-// import SubPageHeader from '../../components/SubPageHeader'
+import { Segment, Container } from 'semantic-ui-react'
 
 const propTypes = {
   pageData: PropTypes.object.isRequired
@@ -15,119 +8,37 @@ const propTypes = {
 
 const AboutUs = () => (
   <div>
-    {/* <SubPageHeader label={pageData.label} /> */}
     <Segment basic>
       <Container>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-          mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-          semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-          porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-          ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-          ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-          mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-          semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-          porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-          ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-          ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-          mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-          semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-          porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-          ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-          ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-        </p>
-        <Segment>
-          <Statistic.Group widths="four">
-            <Statistic>
-              <Statistic.Value>22</Statistic.Value>
-              <Statistic.Label>Saves</Statistic.Label>
-            </Statistic>
-
-            <Statistic>
-              <Statistic.Value text>
-                Three
-                <br />Thousand
-              </Statistic.Value>
-              <Statistic.Label>Signups</Statistic.Label>
-            </Statistic>
-
-            <Statistic>
-              <Statistic.Value>
-                <Icon name="plane" />
-                5
-              </Statistic.Value>
-              <Statistic.Label>Flights</Statistic.Label>
-            </Statistic>
-
-            <Statistic>
-              <Statistic.Value>
-                <Image
-                  src="https://react.semantic-ui.com/assets/images/avatar/small/joe.jpg"
-                  className="circular inline"
-                />
-                42
-              </Statistic.Value>
-              <Statistic.Label>Team Members</Statistic.Label>
-            </Statistic>
-          </Statistic.Group>
-        </Segment>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-          mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-          semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-          porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-          ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-          ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-          mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-          semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-          porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-          ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-          ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-        </p>
+        <h3 id="category-title">Structure</h3>
+        <div>
+          <h4 id="article-title">What's the structure of JavaScript?</h4>
+          <div id="article-content">
+            <p>
+              Nobis at explicabo similique laudantium deserunt, excepturi fugit
+              eum voluptatem commodi soluta quaerat, adipisci ducimus optio,
+              earum beatae! Cupiditate laboriosam tenetur libero at vitae
+              possimus velit est, eum quam ratione. Molestiae, veniam.
+            </p>
+          </div>
+          <h4 id="article-title">What's the file structure?</h4>
+          <div id="article-content">
+            <p>
+              Nobis at explicabo similique laudantium deserunt, excepturi fugit
+              eum voluptatem commodi soluta quaerat, adipisci ducimus optio,
+              earum beatae! Cupiditate laboriosam tenetur libero at vitae
+              possimus velit est, eum quam ratione. Molestiae, veniam.Nobis at
+              explicabo similique laudantium deserunt, excepturi fugit eum
+              voluptatem commodi soluta quaerat, adipisci ducimus optio, earum
+              beatae! Cupiditate laboriosam tenetur libero at vitae possimus
+              velit est, eum quam ratione. Molestiae, veniam.Nobis at explicabo
+              similique laudantium deserunt, excepturi fugit eum voluptatem
+              commodi soluta quaerat, adipisci ducimus optio, earum beatae!
+              Cupiditate laboriosam tenetur libero at vitae possimus velit est,
+              eum quam ratione. Molestiae, veniam.
+            </p>
+          </div>
+        </div>
       </Container>
     </Segment>
   </div>

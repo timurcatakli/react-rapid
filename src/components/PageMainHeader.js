@@ -1,38 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  Container,
-  Grid,
-  Segment,
-  Header
-} from 'semantic-ui-react'
+import { Container, Grid, Segment } from 'semantic-ui-react'
 
 const propTypes = {
   activePage: PropTypes.object.isRequired
 }
 
-const PageMainHeader = (props) => {
-  const {activePage} = props
-  const {label, subTitle} = activePage
+const PageMainHeader = props => {
+  const { activePage } = props
+  const { label, subTitle } = activePage
   return (
-    <div className="subpage-header-container">
-      <Segment basic>
-        <Container>
-          <Grid verticalAlign="middle">
-            <Grid.Row>
-              <Grid.Column width={12}>
-                <Header as={'h2'} style={{ color: 'gold' }}>
-                  {label.toUpperCase()}
-                </Header>
-                <div className="page-sub-title">
-                  {subTitle}
-                </div>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </Segment>
-    </div>
+    <Segment clearing basic id="page-header-segment">
+      <Container>
+        <Grid divided inverted stackable>
+          <Grid.Row>
+            <Grid.Column width={16}>
+              <div>
+                <h1 id="page-title">{label.toUpperCase()}</h1>
+                <h2 id="page-description">{subTitle}</h2>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
+    </Segment>
   )
 }
 

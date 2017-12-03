@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
-import {
-  Menu,
-  Button,
-  Grid
-} from 'semantic-ui-react'
+import { Menu, Container, Image } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
-import config from '../config'
 
 const propTypes = {
   subpages: PropTypes.object.isRequired,
@@ -30,44 +25,26 @@ class PageMainNav extends Component {
     return menuItems
   }
 
-  renderCallToAction = callToAction => {
-    if (!callToAction.active) return null
-    return (
-      <Menu.Item position="right">
-        <Button primary>{callToAction.message}</Button>
-      </Menu.Item>
-    )
-  }
-
   render() {
     const { subpages, siteLabel, siteLogoUrl } = this.props
-    const { menuCallToAction } = config
     const menuItems = this.renderMenuItems(subpages)
-    const callToAction = this.renderCallToAction(menuCallToAction)
 
     return (
-      <Grid>
-        <Grid.Row only="computer">
-          <Grid.Column>
-            <Menu
-              size="large"
-              secondary
-              fixed="top"
-              color="orange"
-              className="top-menu"
-            >
-              <Menu.Item header color="orange">
-                <img src={siteLogoUrl} alt={siteLabel} />
-                &nbsp; &nbsp;
-                {siteLabel}
-              </Menu.Item>
-              <Menu.Item link name="home" as={NavLink} exact to="/" />
-              {menuItems}
-              {callToAction}
-            </Menu>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <Menu fixed="top" color={'red'} inverted>
+        <Container>
+          <Menu.Item as="a" header>
+            <Image
+              size="mini"
+              src={siteLogoUrl}
+              alt={siteLabel}
+              style={{ marginRight: '1.5em' }}
+            />
+            &nbsp; &nbsp;
+            {siteLabel}
+          </Menu.Item>
+          <Menu.Menu position="right">{menuItems}</Menu.Menu>
+        </Container>
+      </Menu>
     )
   }
 }

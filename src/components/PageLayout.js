@@ -4,15 +4,7 @@ import config from '../config'
 import PageMainFooter from '../components/PageMainFooter'
 import PageMainHeader from '../components/PageMainHeader'
 import PageMainNav from '../components/PageMainNav'
-import PageMobileHeader from '../components/PageMobileHeader'
-import PageMobileNav from '../components/PageMobileNav'
 import PageRoutes from '../components/PageRoutes'
-import {
-  Grid,
-  Sidebar,
-  Segment
-} from 'semantic-ui-react'
-
 const propTypes = {
   match: PropTypes.shape({
     path: PropTypes.string
@@ -21,33 +13,32 @@ const propTypes = {
 
 class PageLayout extends React.Component {
   render() {
-    const { pages, siteLabel, siteLogoUrl, copyrightYear } = config
+    const { pages, siteLabel, siteLogoUrl, footer } = config
+    const { copyrightYear } = footer
+    const footerMessage = footer.message
     const { path } = this.props.match
-    const { visible } = this.state
     const activePage = this.findActivePage(pages)
 
     return (
-      <div style={{ backgroundColor: '#f9f9f9' }}>
-        <Sidebar.Pushable as={Segment}>
-          <PageMobileNav visible={visible} subpages={pages} />
-          <Sidebar.Pusher>
-            <Grid>
-              <Grid.Row only="mobile">
-                <Grid.Column>
-                  <PageMobileHeader siteLabel={siteLabel} siteLogoUrl={siteLogoUrl} toggleVisibility={this.toggleVisibility} />
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-            <PageMainNav subpages={pages} siteLabel={siteLabel} siteLogoUrl={siteLogoUrl} />
-            <PageMainHeader activePage={activePage} />
-            <PageRoutes path={path} />
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
-        <PageMainFooter siteLabel={siteLabel} copyrightYear={copyrightYear} />
+      <div>
+        <PageMainNav
+          subpages={pages}
+          siteLabel={siteLabel}
+          siteLogoUrl={siteLogoUrl}
+        />
+        <PageMainHeader activePage={activePage} />
+        <PageRoutes path={path} />
+        <PageMainFooter
+          subpages={pages}
+          siteLabel={siteLabel}
+          siteLogoUrl={siteLogoUrl}
+          siteLabel={siteLabel}
+          copyrightYear={copyrightYear}
+          message={footerMessage}
+        />
       </div>
     )
   }
-  toggleVisibility = () => this.setState({ visible: !this.state.visible })
 
   findActivePage = pageList => {
     const activePageMatch = Object.keys(pageList).filter(page => {
@@ -56,7 +47,6 @@ class PageLayout extends React.Component {
     const activePage = pageList[activePageMatch[0]]
     return activePage
   }
-  state = { visible: false }
 }
 
 PageLayout.propTypes = propTypes

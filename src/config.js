@@ -2,30 +2,39 @@ const config = {
   homepage: 'http://www.siteurl.com',
   siteLabel: 'ACME Corp',
   siteLogoUrl: 'https://react.semantic-ui.com/logo.png',
-  copyrightYear: 2017,
-  menuCallToAction: {
-    active: true,
-    message: 'CALL US 1.369.741.2580',
-    icon: 'phone'
+  footer: {
+    message:
+      'Extra space for a call to action inside the footer that could help re-engage users.',
+    copyrightYear: 2017
   },
   pages: {
     aboutus: {
       component: 'AboutUs',
       label: 'About Us',
-      subTitle: 'LOREM IPSUM DOLOR SIT AMET CONSECTETUR',
+      subTitle:
+        'About Us unc gravida tellus eget odio molestie eleifend feugiat non lorem.',
       path: '/aboutus'
     },
-    aboutus1: {
-      component: 'AboutUs',
-      label: 'About Us1',
-      subTitle: 'LOREM IPSUM DOLOR SIT AMET CONSECTETUR1',
-      path: '/subpage-a'
+    portfolio: {
+      component: 'Portfolio',
+      label: 'Portfolio',
+      subTitle:
+        'Portfolio Nunc gravida tellus eget odio molestie eleifend feugiat non lorem.',
+      path: '/portfolio'
     },
-    aboutus2: {
-      component: 'AboutUs',
-      label: 'About Us2',
-      subTitle: 'LOREM IPSUM DOLOR SIT AMET CONSECTETUR2',
-      path: '/subpage-b'
+    services: {
+      component: 'Services',
+      label: 'Services',
+      subTitle:
+        'Services Nunc gravida tellus eget odio molestie eleifend feugiat non lorem.',
+      path: '/services'
+    },
+    contactus: {
+      component: 'ContactUs',
+      label: 'Contact Us',
+      subTitle:
+        'Contact Us Nunc gravida tellus eget odio molestie eleifend feugiat non lorem.',
+      path: '/contact'
     }
   },
   // Web analytics settings
