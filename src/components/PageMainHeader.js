@@ -14,11 +14,9 @@ const PageMainHeader = props => {
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
-            <Grid.Column width={16}>
-              <div>
-                <h1 id="page-title">{label.toUpperCase()}</h1>
-                <h2 id="page-description">{subTitle}</h2>
-              </div>
+            <Grid.Column>
+              <h1 id="page-title">{label.toUpperCase()}</h1>
+              <h2 id="page-description">{subTitle}</h2>
             </Grid.Column>
           </Grid.Row>
         </Grid>

@@ -1,5 +1,3 @@
-// http://t.commonsupport.com/calena/about.html
-// http://abcgomel.ru/haswell/about-us-2.html
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Home from './pages/home/Home'
