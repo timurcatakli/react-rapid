@@ -5,17 +5,15 @@ import AboutUs from '../pages/about-us/AboutUs'
 import Portfolio from '../pages/portfolio/Portfolio'
 import Services from '../pages/services/Services'
 import Contact from '../pages/contact/Contact'
-import config from '../config'
 
 const propTypes = {
-  path: PropTypes.string
+  path: PropTypes.string,
+  activePage: PropTypes.object.isRequired
 }
 
 class PageRoutes extends React.Component {
   render() {
-    const { pages } = config
-    const { path } = this.props
-    const activePage = this.findActivePage(pages, path)
+    const { activePage } = this.props
 
     return (
       <Switch>
@@ -33,14 +31,6 @@ class PageRoutes extends React.Component {
         </Route>
       </Switch>
     )
-  }
-
-  findActivePage = (pageList, path) => {
-    const activePageMatch = Object.keys(pageList).filter(page => {
-      return pageList[page].path === path
-    })
-    const activePage = pageList[activePageMatch[0]]
-    return activePage
   }
 }
 

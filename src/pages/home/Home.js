@@ -8,88 +8,46 @@ import {
   Icon,
   Image,
   List,
-  Menu,
   Segment,
   Visibility
 } from 'semantic-ui-react'
 import config from '../../config'
-import PageMainNav from '../../components/PageMainNav'
-
-const FixedMenu = () => (
-  <Menu fixed="top" size="large">
-    <Container>
-      <Menu.Item as="a" active>
-        Home
-      </Menu.Item>
-      <Menu.Item as="a">Work</Menu.Item>
-      <Menu.Item as="a">Company</Menu.Item>
-      <Menu.Item as="a">Careers</Menu.Item>
-      <Menu.Menu position="right">
-        <Menu.Item className="item">
-          <Button as="a">Log in</Button>
-        </Menu.Item>
-        <Menu.Item>
-          <Button as="a" primary>
-            Sign Up
-          </Button>
-        </Menu.Item>
-      </Menu.Menu>
-    </Container>
-  </Menu>
-)
 
 export default class Home extends Component {
   render() {
-    const { visible } = this.state
-    const { pages, siteLabel, siteLogoUrl } = config
-
     return (
       <div>
-        {visible ? <FixedMenu /> : null}
-
-        <Visibility
-          onBottomPassed={this.showFixedMenu}
-          onBottomVisible={this.hideFixedMenu}
-          once={false}
+        <Segment
+          inverted
+          textAlign="center"
+          id="page-header-home"
+          style={{ minHeight: 700, padding: '1em 0em' }}
+          vertical
         >
-          <Segment
-            inverted
-            textAlign="center"
-            id="page-header-home"
-            style={{ minHeight: 700, padding: '1em 0em' }}
-            vertical
-          >
-            <PageMainNav
-              subpages={pages}
-              siteLabel={siteLabel}
-              siteLogoUrl={siteLogoUrl}
-              toggleVisibility={this.toggleVisibility}
-            />
 
-            <Container text>
-              <Header
-                as="h1"
-                content="Imagine-a-Company"
-                style={{
-                  fontSize: '4em',
-                  fontWeight: 'normal',
-                  marginBottom: 0,
-                  marginTop: '3em'
-                }}
-              />
-              <Header
-                as="h2"
-                content="Do whatever you want when you want to."
-                inverted
-                style={{ fontSize: '1.7em', fontWeight: 'normal' }}
-              />
-              <Button primary size="huge">
-                Get Started
-                <Icon name="right arrow" />
-              </Button>
-            </Container>
-          </Segment>
-        </Visibility>
+          <Container text>
+            <Header
+              as="h1"
+              content="Imagine-a-Company"
+              style={{
+                fontSize: '4em',
+                fontWeight: 'normal',
+                marginBottom: 0,
+                marginTop: '3em'
+              }}
+            />
+            <Header
+              as="h2"
+              content="Do whatever you want when you want to."
+              inverted
+              style={{ fontSize: '1.7em', fontWeight: 'normal' }}
+            />
+            <Button primary size="huge">
+              Get Started
+              <Icon name="right arrow" />
+            </Button>
+          </Container>
+        </Segment>
 
         <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign="middle">

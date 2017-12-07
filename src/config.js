@@ -14,6 +14,23 @@
 
 // <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
+// Blazing-fast static site generator for React
+// Get Started
+// Github Repor
+// Contribution
+// How to setup/install
+// How to add a new page
+// Packages used
+// Support
+// Github page title and tags =>
+// ⚛️📄🚀 Blazing fast static site generator for React https://www.gatsbyjs.org
+// gatsby static-site-generator react blog documentation-tool
+
+// Packages
+// This repository is a monorepo managed using Lerna. This means that we publish many packages to NPM from the same codebase.
+// Thanks
+// Thanks to our many contributors and sponsors as well as the companies sponsoring our testing and hosting infrastructure, Travis CI, Appveyor, and Netlify.
+
 const config = {
   homepage: 'http://www.siteurl.com',
   email: 'contact@acme.com',

@@ -9,7 +9,7 @@ const propTypes = {
   siteLogoUrl: PropTypes.string.isRequired,
   toggleVisibility: PropTypes.func.isRequired
 }
-class PageMainNav extends Component {
+class MainNav extends Component {
   renderMenuItems = subpages => {
     const menuItems = Object.keys(subpages).map(page => {
       return (
@@ -31,7 +31,7 @@ class PageMainNav extends Component {
     return (
       <Menu fixed="top" color={'red'} inverted>
         <Container>
-          <Menu.Item as="a" header link href={'/'}>
+          <Menu.Item as={NavLink} header link to={'/'}>
             <Image
               size="mini"
               src={url}
@@ -90,5 +90,5 @@ class PageMainNav extends Component {
   }
 }
 
-PageMainNav.propTypes = propTypes
-export default PageMainNav
+MainNav.propTypes = propTypes
+export default MainNav
