@@ -12,7 +12,8 @@ import {
   Segment,
   Visibility
 } from 'semantic-ui-react'
-
+import config from '../../config'
+import PageMainNav from '../../components/PageMainNav'
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
@@ -40,6 +41,7 @@ const FixedMenu = () => (
 export default class Home extends Component {
   render() {
     const { visible } = this.state
+    const { pages, siteLabel, siteLogoUrl } = config
 
     return (
       <div>
@@ -53,14 +55,21 @@ export default class Home extends Component {
           <Segment
             inverted
             textAlign="center"
+            id="page-header-home"
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
           >
+            <PageMainNav
+              subpages={pages}
+              siteLabel={siteLabel}
+              siteLogoUrl={siteLogoUrl}
+              toggleVisibility={this.toggleVisibility}
+            />
+
             <Container text>
               <Header
                 as="h1"
                 content="Imagine-a-Company"
-                inverted
                 style={{
                   fontSize: '4em',
                   fontWeight: 'normal',

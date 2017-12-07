@@ -31,7 +31,7 @@ class PageMainNav extends Component {
     return (
       <Menu fixed="top" color={'red'} inverted>
         <Container>
-          <Menu.Item as="a" header>
+          <Menu.Item as="a" header link href={'/'}>
             <Image
               size="mini"
               src={url}

@@ -19,7 +19,7 @@ const config = {
   email: 'contact@acme.com',
   phone: '415 555 6745',
   siteLabel: 'React Rapid',
-  siteLogoUrl: 'img/atomic-256.png',
+  siteLogoUrl: 'img/react-rapid-logo-512.png',
   footer: {
     message:
       'Extra space for a call to action inside the footer that could help re-engage users.',

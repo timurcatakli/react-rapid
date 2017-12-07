@@ -113,6 +113,18 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+#page-header-home {
+  background-image: url('/img/backgrounds/2.jpg');
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 #page-header-segment {
   background-image: url('/img/backgrounds/2.jpg');
   background-attachment: fixed;
