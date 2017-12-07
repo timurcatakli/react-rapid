@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import {
   Segment,
   Container,
@@ -9,8 +8,6 @@ import {
   Button
 } from 'semantic-ui-react'
 import config from '../../config'
-
-const propTypes = {}
 
 class Portfolio extends Component {
   constructor(props) {
@@ -58,7 +55,7 @@ class Portfolio extends Component {
         return project.category === category
       })
     }
-    return results.map((project) => {
+    return results.map(project => {
       return (
         <Card color="olive" key={project.id}>
           <Image src={project.thumbnail} />
@@ -74,13 +71,20 @@ class Portfolio extends Component {
   render() {
     const { selectedCategory } = this.state
     const { projects } = config
+    const browserSize = {
+      width: window.innerWidth || document.body.clientWidth,
+      height: window.innerHeight || document.body.clientHeight
+    }
+    const isButtonGroupVertical = browserSize.width <= 748 ? true : false
     return (
       <div>
         <Segment basic>
           <Container textAlign="center">
-            {this.renderProjectsHeader()}
+            <Button.Group size="large" toggle vertical={isButtonGroupVertical}>
+              {this.renderProjectsHeader()}
+            </Button.Group>
             <Divider />
-            <Card.Group textAlign="center" itemsPerRow="3">
+            <Card.Group textAlign="center" itemsPerRow="5" stackable>
               {this.renderProjects(selectedCategory, projects)}
             </Card.Group>
           </Container>
@@ -108,5 +112,4 @@ class Portfolio extends Component {
   }
 }
 
-Portfolio.propTypes = propTypes
 export default Portfolio

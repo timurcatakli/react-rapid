@@ -36,7 +36,6 @@ class PageMainNav extends Component {
               size="mini"
               src={url}
               alt={label}
-              style={{ marginRight: '1.5em' }}
             />
             &nbsp; &nbsp;
             {label}
