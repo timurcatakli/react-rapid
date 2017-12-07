@@ -44,13 +44,13 @@ const Contact = () => {
               </Grid.Column>
               <Grid.Column width={6}>
                 <Message
-                  color="gray"
+                  color="grey"
                   icon="phone"
                   header="Give Us a Call"
                   content={phone}
                 />
                 <Message
-                  color="gray"
+                  color="grey"
                   icon="mail"
                   header="Send an Email"
                   content={email}
