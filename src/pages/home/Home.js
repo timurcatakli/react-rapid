@@ -19,18 +19,12 @@ const propTypes = {
 class Home extends Component {
   render() {
     const { siteLabel, footer } = this.props
-    const {copyrightYear} = footer
+    const { copyrightYear } = footer
     return (
       <div>
-        <Segment
-          inverted
-          textAlign="center"
-          id="page-header-home"
-          vertical
-          verticalAlign="middle"
-        >
+        <Segment inverted textAlign="center" id="page-header-home" vertical>
           <Container>
-            <Grid stackable verticalAlign="middle">
+            <Grid stackable textAlign="center" verticalAlign="middle">
               <Grid.Row>
                 <Grid.Column width={8}>
                   <Image
@@ -58,9 +52,9 @@ class Home extends Component {
                     content="Fast, Responsive & Free React Starter Template"
                     inverted
                   />
-                  <Button primary size="huge" color="github">
+                  <Button primary size="huge" color="facebook">
                     <Icon name="github" />
-                    Download Now
+                    Github Page
                   </Button>
                 </Grid.Column>
               </Grid.Row>
@@ -68,13 +62,13 @@ class Home extends Component {
           </Container>
         </Segment>
 
-        <Segment style={{ padding: '8em 0em' }} vertical>
-          <Grid container stackable verticalAlign="top">
+        <Segment vertical>
+          <Grid container stackable>
             <Grid.Row>
               <Grid.Column width={8}>
-                <Header id="home-h2">React Rapid?</Header>
+                <Header id="home-h2">React Rapid</Header>
                 <p>
-                  You are looking at React Rapid. It is a prebuilt responsive
+                  React Rapid is a prebuilt responsive
                   single page html template based on React and other popular
                   libraries.
                 </p>
@@ -83,36 +77,39 @@ class Home extends Component {
                   needs and get going in minutes.
                 </p>
                 <Header id="home-h2">Developed Using</Header>
-                <p>
-                  <List as="ul">
-                    <List.Item as="li">
-                      <a
-                        href="https://github.com/facebookincubator/create-react-app"
-                        target="_blank"
-                      >
-                        Create-React-App
-                      </a>
-                    </List.Item>
-                    <List.Item as="li">
-                      <a
-                        href="https://github.com/ReactTraining/react-router"
-                        target="_blank"
-                      >
-                        React Router
-                      </a>
-                    </List.Item>
-                    <List.Item as="li">
-                      <a href="https://react.semantic-ui.com" target="_blank">
-                        Semantic UI
-                      </a>
-                    </List.Item>
-                    <List.Item as="li">
-                      <a href="https://html5boilerplate.com/" target="_blank">
-                        HTML5 Boilerplate
-                      </a>
-                    </List.Item>
-                  </List>
-                </p>
+                <List as="ul">
+                  <List.Item as="li">
+                    <a
+                      href="https://github.com/facebookincubator/create-react-app"
+                      target="_blank"
+                    >
+                      Create-React-App
+                    </a>
+                  </List.Item>
+                  <List.Item as="li">
+                    <a
+                      href="https://github.com/ReactTraining/react-router"
+                      target="_blank"
+                    >
+                      React Router
+                    </a>
+                  </List.Item>
+                  <List.Item as="li">
+                    <a href="https://react.semantic-ui.com" target="_blank">
+                      Semantic UI
+                    </a>
+                  </List.Item>
+                  <List.Item as="li">
+                    <a href="https://html5boilerplate.com/" target="_blank">
+                      HTML5 Boilerplate
+                    </a>
+                  </List.Item>
+                  <List.Item as="li">
+                    <a href="https://firebase.com/" target="_blank">
+                      Ready for Firebase hosting
+                    </a>
+                  </List.Item>
+                </List>
                 <Header id="home-h2">Contributions</Header>
                 <p>
                   If you are interested in expanding the project, here are the
@@ -146,63 +143,60 @@ class Home extends Component {
                   </a>
                   by Rob Allen.
                 </p>
-                <Header id="home-h2">Site Speed</Header>
-                <p>
-                  Doctrina amet summis vidisse cillum ab ne ita relinqueret eu
-                  occaecat multos laborum.
-                </p>
                 <Header id="home-h2">References</Header>
+                <div>
+                  React Rapid logo is made by
+                  <a
+                    href="https://www.flaticon.com/authors/roundicons"
+                    title="Roundicons"
+                  >
+                    Roundicons
+                  </a>
+                  from
+                  <a href="https://www.flaticon.com/" title="Flaticon">
+                    www.flaticon.com
+                  </a>
+                  is licensed by
+                  <a
+                    href="http://creativecommons.org/licenses/by/3.0/"
+                    title="Creative Commons BY 3.0"
+                    target="_blank"
+                  >
+                    CC 3.0 BY
+                  </a>
+                </div>
                 <p>
-                  <div>
-                    React Rapid logo is made by
-                    <a
-                      href="https://www.flaticon.com/authors/roundicons"
-                      title="Roundicons"
-                    >
-                      Roundicons
-                    </a>
-                    from
-                    <a href="https://www.flaticon.com/" title="Flaticon">
-                      www.flaticon.com
-                    </a>
-                    is licensed by
-                    <a
-                      href="http://creativecommons.org/licenses/by/3.0/"
-                      title="Creative Commons BY 3.0"
-                      target="_blank"
-                    >
-                      CC 3.0 BY
-                    </a>
-                  </div>
+                  Site photos by{' '}
+                  <a href="https://www.pexels.com/" target="_blank">
+                    Pexels.com
+                  </a>
                 </p>
-                <p>Site photos by <a href="https://www.pexels.com/" target="_blank">Pexels.com</a></p>
                 <Header id="home-h2">Installation & Setup</Header>
                 <p>
-                  Doctrina amet summis vidisse cillum ab ne ita relinqueret eu
-                  occaecat multos laborum.
+                  Please visit the <a href="https://github.com/timurcatakli/react-rapid" target="_blank">Github page</a> for detailed instructions
                 </p>
                 <Header id="home-h2">Support</Header>
                 <p>
-                  Doctrina amet summis vidisse cillum ab ne ita relinqueret eu
-                  occaecat multos laborum.
+                  For questions, comments please use <a href="https://github.com/timurcatakli/react-rapid/issues" target="_blank">Github Issues page</a>.
+                </p>
+                <Header id="home-h2">Who am I?</Header>
+                <p>
+                  <a href="https://www.linkedin.com/in/timurcatakli/" target="_blank">Click here</a> to find out more about me...
                 </p>
               </Grid.Column>
-              <Grid.Column width={6} verticalAlign="top">
+              <Grid.Column width={8} verticalAlign="top">
                 <Image
                   bordered
-                  rounded
                   size="large"
                   src="/img/responsive-iphone.png"
                 />
                 <Image
                   bordered
-                  rounded
                   size="large"
                   src="/img/responsive-tablet.png"
                 />
                 <Image
                   bordered
-                  rounded
                   size="large"
                   src="/img/responsive-desktop.png"
                 />
@@ -210,7 +204,7 @@ class Home extends Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column textAlign="center">
-                <Button primary size="huge" color="github">
+                <Button primary size="huge" color="facebook">
                   <Icon name="github" />
                   Download Now
                 </Button>

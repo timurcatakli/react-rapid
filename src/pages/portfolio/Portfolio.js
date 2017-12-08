@@ -20,9 +20,7 @@ class Portfolio extends Component {
     const { selectedCategory } = this.state
     const activeColor = 'olive'
     const deActiveColor = 'linkedin'
-    let categoryCount = 0
     const result = Object.keys(projects).map(category => {
-      categoryCount += projects[category]
       const buttonColor =
         category === selectedCategory ? activeColor : deActiveColor
       return (

@@ -129,7 +129,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 #page-header-home {
-  background-image: url('/img/backgrounds/2.jpg');
+  background-image: url('/img/background.jpg');
   background-attachment: fixed;
   background-repeat: repeat;
   background-position: center center;
@@ -141,7 +141,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 #page-header-segment {
-  background-image: url('/img/backgrounds/2.jpg');
+  background-image: url('/img/background.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
