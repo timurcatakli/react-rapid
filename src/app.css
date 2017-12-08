@@ -19,6 +19,7 @@ html {
   font-size: 1em;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -113,6 +114,20 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+#home-h1 {
+font-size: 4em;
+font-weight: 300;
+color: #ea0b5c;
+font-family: 'Roboto', sans-serif;
+}
+
+#home-h2 {
+font-size: 2em;
+font-weight: 300;
+color: black;
+font-family: 'Roboto', sans-serif;
+}
+
 #page-header-home {
   background-image: url('/img/backgrounds/2.jpg');
   background-attachment: fixed;
@@ -121,8 +136,8 @@ textarea {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 160px;
+  padding-bottom: 160px;
 }
 
 #page-header-segment {

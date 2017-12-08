@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   render() {
-    const { pages, siteLabel, siteLogoUrl } = config
+    const { pages, siteLabel, footer, siteLogoUrl } = config
     const { visible } = this.state
     return (
       <div className="app">
@@ -49,7 +49,9 @@ class App extends Component {
               toggleVisibility={this.toggleVisibility}
             />
             <Switch>
-              <Route path="/" exact component={Home} />
+              <Route path="/" exact>
+                <Home siteLabel={siteLabel} footer={footer} />
+              </Route>
               {this.renderRoutes()}
               <Route component={FourOhFour} />
             </Switch>
