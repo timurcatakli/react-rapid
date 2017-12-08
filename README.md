@@ -52,16 +52,16 @@ or
 ## Adding a New Page
 1- Open the `config.js` file located under `src` directory
 
-2- Add a new key and value under pages as below
+2- Add a new key and value under `pages` as below.Pick an icon from [Semantic-UI](https://react.semantic-ui.com/elements/icon).
 
 ```
 pages: {
   newpage: {
     component: 'NewPage',
     label: 'New Page',
-    icon: 'signal',
+    icon: 'alarm',
     subTitle:
-      'New Page subtitle goes here.',
+      'New Page unc gravida tellus eget odio molestie eleifend feugiat non lorem.',
     path: '/newpage'
   },
   aboutus: {
@@ -72,47 +72,126 @@ pages: {
       'About Us unc gravida tellus eget odio molestie eleifend feugiat non lorem.',
     path: '/aboutus'
   },
+  ...
+  ..
+  .
 ```
-3- https://react.semantic-ui.com/elements/icon
-firebase deploy
+3- Under `src/pages` folder create a new folder called: `new-page`
+4- Under the folder `new-page`, create a file called `NewPage.js` and add the following starter code.
 
-seo index.html
-icons go to the site to generate your own icons...
+```js
+import React from 'react'
+import PropTypes from 'prop-types'
+import {
+  Segment,
+  Container,
+  Grid
+} from 'semantic-ui-react'
 
-### `yarn` or `npm start`
+const propTypes = {
+  pageData: PropTypes.object.isRequired
+}
+const NewPage = () => (
+  <div>
+    <Segment basic>
+      <Container>
+        <h3 id="category-title">Magna Aliqua Enimad</h3>
+        <Grid columns={2} stackable verticalAlign="top">
+          <Grid.Column>
+            <h4 id="article-title">Magna Aliqua Enimad</h4>
+            <div id="article-content">
+              <p>
+                Nobis at explicabo similique laudantium deserunt, excepturi
+                fugit eum voluptatem commodi soluta quaerat, adipisci ducimus
+                optio, earum beatae! Cupiditate laboriosam tenetur libero at
+                vitae possimus velit est, eum quam ratione. Molestiae, veniam.
+              </p>
+            </div>
+          </Grid.Column>
+          <Grid.Column>
+            <h4 id="article-title">Magna Aliqua Enimad</h4>
+            <div id="article-content">
+              <p>
+                Nobis at explicabo similique laudantium deserunt, excepturi
+                fugit eum voluptatem commodi soluta quaerat, adipisci ducimus
+                optio, earum beatae! Cupiditate laboriosam tenetur libero at
+                vitae possimus velit est, eum quam ratione. Molestiae, veniam.
+              </p>
+            </div>
+          </Grid.Column>
+        </Grid>
+      </Container>
+    </Segment>
+  </div>
+)
 
-### `yarn start` or `npm start`
+NewPage.propTypes = propTypes
+export default NewPage
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+5- Finally update the page routes file `PageRoutes.js` as below:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```js
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Route, Switch } from 'react-router-dom'
+import AboutUs from '../pages/about-us/AboutUs'
+import Portfolio from '../pages/portfolio/Portfolio'
+import Services from '../pages/services/Services'
+import Contact from '../pages/contact/Contact'
+import NewPage from '../pages/new-page/NewPage'
 
-### `yarn test` or `npm test`
+const propTypes = {
+  path: PropTypes.string,
+  activePage: PropTypes.object.isRequired
+}
 
-Launches the test runner in the interactive watch mode.
+class PageRoutes extends React.Component {
+  render() {
+    const { activePage } = this.props
 
-### `npm run build`
+    return (
+      <Switch>
+        <Route path="/aboutus">
+          <AboutUs pageData={activePage} />
+        </Route>
+        <Route path="/newpage">
+          <NewPage pageData={activePage} />
+        </Route>
+        <Route path="/portfolio">
+          <Portfolio pageData={activePage} />
+        </Route>
+        <Route path="/services">
+          <Services pageData={activePage} />
+        </Route>
+        <Route path="/contact">
+          <Contact pageData={activePage} />
+        </Route>
+      </Switch>
+    )
+  }
+}
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+PageRoutes.propTypes = propTypes
+export default PageRoutes
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## SEO
+Don't forget to update the `index.html` file with your info. Also you can use [Favicon Generator](https://realfavicongenerator.net) and update the favicons under root folder.
 
-See the section about [deployment](#deployment) for more information.
+## Deployment
+In order to deploy your project to Firebase Hosting, follow these instructions:
 
-### `npm run eject`
+1- Make sure that Firebase CLI tools is installed locally.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2- Login to Firebase and create a projects
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3- Update `.firebaserc` file with your project name.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4- Run `yarn build` or `npm run build`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+5- Run `firebase deploy`
 
-## Sending Feedback
+## Sending Feedback/Contribution
 
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
+We are always open to [your feedback & contributions](https://github.com/timurcatakli/react-rapid/issues).
