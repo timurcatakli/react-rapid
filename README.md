@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 After pulling to your local, your project should look like this:
 
-```
+```js
 my-app/
   README.md
   node_modules/
@@ -29,25 +29,23 @@ For the project to build, **these files must exist with exact filenames**:
 You can delete or rename the other files.
 
 ## Installation & Setup
-1- Clone the repo:
 
-`git clone https://github.com/timurcatakli/react-rapid.git`
+### Using NPM
+```js
+$ git clone https://github.com/timurcatakli/react-rapid.git
+$ cd react-rapid
+$ npm install
+$ npm run start
+```
 
-2- Switch to directory
-
-`cd react-rapid`
-
-3- Run npm or yarn
-
-`npm install`
-or
-`yarn`
-
-4- After all Node modules are installed
-
-`npm run start` or `yarn start`
-
-5- Your website should be started automatically in your browser at `http://localhost:3000`
+### Using Yarn
+```js
+$ git clone https://github.com/timurcatakli/react-rapid.git
+$ cd react-rapid
+$ yarn
+$ yarn start
+```
+Your website should be started automatically in your browser at `http://localhost:3000`
 
 ## Adding a New Page
 1- Open the `config.js` file located under `src` directory
@@ -195,4 +193,8 @@ In order to deploy your project to Firebase Hosting, follow these instructions:
 
 ## Sending Feedback/Contribution
 
-We are always open to [your feedback & contributions](https://github.com/timurcatakli/react-rapid/issues).
+Always open to [your feedback & contributions](https://github.com/timurcatakli/react-rapid/issues).
+
+## License
+
+The MIT License (MIT) Copyright (c)
