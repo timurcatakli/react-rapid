@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). So any feature or script supported by Create-React-App is also supported.
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). Any feature or script supported by Create-React-App is also supported.
 
 ## Folder Structure
 
@@ -52,7 +52,7 @@ or
 ## Adding a New Page
 1- Open the `config.js` file located under `src` directory
 
-2- Add a new key and value under `pages` as below.Pick an icon from [Semantic-UI](https://react.semantic-ui.com/elements/icon).
+2- Add a new key and value under `pages` as below. Pick an icon from [Semantic-UI](https://react.semantic-ui.com/elements/icon).
 
 ```
 pages: {
@@ -77,6 +77,7 @@ pages: {
   .
 ```
 3- Under `src/pages` folder create a new folder called: `new-page`
+
 4- Under the folder `new-page`, create a file called `NewPage.js` and add the following starter code.
 
 ```js
