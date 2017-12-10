@@ -52,10 +52,15 @@ class Home extends Component {
                     content="Fast, Responsive & Free React Starter Template"
                     inverted
                   />
-                  <Button primary size="huge" color="facebook">
-                    <Icon name="github" />
-                    Github Page
-                  </Button>
+                  <a
+                    href="https://github.com/facebookincubator/create-react-app"
+                    target="_blank"
+                  >
+                    <Button primary size="huge" color="facebook">
+                      <Icon name="github" />
+                      Github
+                    </Button>
+                  </a>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
@@ -110,6 +115,15 @@ class Home extends Component {
                     </a>
                   </List.Item>
                 </List>
+                <Header id="home-h2">Installation & Setup</Header>
+                <p>
+                  Please visit the <a href="https://github.com/timurcatakli/react-rapid" target="_blank">Github page</a> for detailed instructions
+                </p>
+                <Header id="home-h2">Support</Header>
+                <p>
+                  For questions, comments please use <a href="https://github.com/timurcatakli/react-rapid/issues" target="_blank">Github Issues page</a>.
+                </p>
+
                 <Header id="home-h2">Contributions</Header>
                 <p>
                   If you are interested in expanding the project, here are the
@@ -143,20 +157,21 @@ class Home extends Component {
                   </a>
                   by Rob Allen.
                 </p>
+
                 <Header id="home-h2">References</Header>
                 <div>
-                  React Rapid logo is made by
+                  React Rapid logo is made by &nbsp;
                   <a
                     href="https://www.flaticon.com/authors/roundicons"
                     title="Roundicons"
                   >
                     Roundicons
                   </a>
-                  from
+                   &nbsp; from  &nbsp;
                   <a href="https://www.flaticon.com/" title="Flaticon">
                     www.flaticon.com
                   </a>
-                  is licensed by
+                   &nbsp; is licensed by  &nbsp;
                   <a
                     href="http://creativecommons.org/licenses/by/3.0/"
                     title="Creative Commons BY 3.0"
@@ -170,14 +185,6 @@ class Home extends Component {
                   <a href="https://www.pexels.com/" target="_blank">
                     Pexels.com
                   </a>
-                </p>
-                <Header id="home-h2">Installation & Setup</Header>
-                <p>
-                  Please visit the <a href="https://github.com/timurcatakli/react-rapid" target="_blank">Github page</a> for detailed instructions
-                </p>
-                <Header id="home-h2">Support</Header>
-                <p>
-                  For questions, comments please use <a href="https://github.com/timurcatakli/react-rapid/issues" target="_blank">Github Issues page</a>.
                 </p>
                 <Header id="home-h2">Who am I?</Header>
                 <p>
@@ -204,10 +211,15 @@ class Home extends Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column textAlign="center">
-                <Button primary size="huge" color="facebook">
-                  <Icon name="github" />
-                  Download Now
-                </Button>
+                <a
+                  href="https://github.com/facebookincubator/create-react-app"
+                  target="_blank"
+                >
+                  <Button primary size="huge" color="facebook">
+                    <Icon name="github" />
+                    Download Now
+                  </Button>
+                </a>
               </Grid.Column>
             </Grid.Row>
           </Grid>
